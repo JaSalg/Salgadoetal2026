@@ -1,0 +1,20 @@
+## How to calculate the Tajima D value in VCFTools
+
+## Open terminal in the directory where you have your input files
+
+## run the following
+
+vcftools 
+	--vcf all_strains.vcf #Input for file type and the file itself
+	--haploid #Select for haploid analysis
+	--TajimaD 200 #Select to calculate Tajima D and the length of the window
+			#in our case 200 bases
+	--keep pop_1.txt #Keep values for samples on this list
+	--out output_Tajima  #Name of output file without an extension
+
+
+## When calculating the Tajima D we separate by populations so we can compare
+## the values between them, in case they are under different selection pressures 
+
+
+

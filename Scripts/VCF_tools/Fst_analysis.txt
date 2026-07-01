@@ -1,0 +1,18 @@
+## How to run an Fst analysis in VCFTools
+
+## Open terminal in the directory where you have your input files
+
+## run the following
+
+vcftools 
+	--vcf all_strains.vcf  #Input for file type and the file itself
+	--haploid #Select for haploid analysis
+	--weir-fst-pop pop_1.txt  #Indicator for first population, and a .txt with 
+					# the list of that population
+	--weir-fst-pop pop_2.txt  #Indicator for first population, and a .txt with 
+					# the list of that population
+	--out output_Fst #Name of output file without an extension
+
+
+## Fst scan can compare 2 populations at a time so in order to compare 3 populations
+## between each other three analysis need to be done: 1 vs 2, 1 vs 3, 2 vs 3. 

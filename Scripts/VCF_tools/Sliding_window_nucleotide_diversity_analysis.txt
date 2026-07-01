@@ -1,0 +1,38 @@
+## How to run a Sliding window nucleotide diversity analysis in VCFTools
+
+## Open terminal in the directory where you have your input files
+
+## run the following
+
+vcftools 
+	--vcf all_strains.vcf  #Input for file type and the file itself
+	--haploid  #Select for haploid analysis
+	--window-pi 50000  #Indicate the window size
+	--window-pi-step 10000  #Indicate how many bases the window will move 
+				# between measures
+	--keep used_strains_list.txt  #Indicate the subset of strains we are
+					# analysing
+	--out output_sliding_window  #Name of output file without an extension
+
+
+-------------------------------------------------------------------------------------
+
+
+## Alternatively to calculate the mean nucleotide diversity across the genome
+
+## run the following
+
+
+vcftools 
+	--vcf all_strains.vcf  #Input for file type and the file itself
+	--haploid  #Select for haploid analysis
+	--window-pi 1838518  #Indicate the window size equal to the whole genome
+	--keep used_strains_list.txt  #Indicate the subset of strains we are
+					# analysing
+	--out output_mean  #Name of output file without an extension
+
+
+## When calculating nucleotide diversity we do not separate populations
+## which is why we have to provide the list of all the strains that are
+## included in our study
+
