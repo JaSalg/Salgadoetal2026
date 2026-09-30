@@ -1,7 +1,5 @@
 ## First set the working directory (change directory to where you have the needed files)
 
-setwd("C:/Users/jaume/Desktop/PhD/Projects/STINg-NGA interplay in aboriginals/00_MANUSCRIPT")
-
 ## Load all needed packages and the installers if needed
 
 library(tidyverse)
